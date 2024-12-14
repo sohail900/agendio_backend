@@ -1,0 +1,11 @@
+@host = http://localhost:3000/api/v1
+### login
+POST {{host}}/signup
+Content-Type: application/json
+
+{
+    "name": "sohail",
+    "email": "sohail@gmail.com",
+    "password": "#Sohail404",
+    "confirmPassword": "#Sohail404"
+}
