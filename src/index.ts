@@ -3,8 +3,8 @@ dotenv.config()
 import express from 'express'
 import cookieParser from 'cookie-parser'
 import http from 'http'
-import router from './router/router.js'
-import { errorMiddleware } from './middlewares/errorMiddleware.js'
+import router from './router/router'
+import errorMiddleware from './middlewares/errorMiddleware'
 //
 const app = express()
 const server = http.createServer(app)

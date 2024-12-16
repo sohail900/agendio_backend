@@ -1,11 +1,12 @@
 import type { Request, Response, NextFunction } from 'express'
-export const errorMiddleware = (
+const errorMiddleware = (
     err: { message: string; statusCode: number },
     req: Request,
-    res: Response,
+    resp: Response,
     next: NextFunction
 ) => {
     err.message = err.message || 'Server failed to respond'
     err.statusCode = err.statusCode || 500
-    res.status(err.statusCode).json({ success: false, message: err.message })
+    resp.status(err.statusCode).json({ success: false, message: err.message })
 }
+export default errorMiddleware

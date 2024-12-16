@@ -33,3 +33,12 @@ export const signUpSchema = z
         path: ['confirmPassword'], // target confirm password field
         message: 'Passwords do not match',
     })
+export const loginSchema = z
+    .object({
+        email: z.string().email({ message: 'Please enter a valid email' }),
+        password: z.string(),
+    })
+    .required({
+        email: true,
+        password: true,
+    })

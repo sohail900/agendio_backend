@@ -15,6 +15,7 @@ model User{
     password String
     event Event[]
     role Role @default(User)
+    refreshToken String @default("")
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
 }
