@@ -18,3 +18,7 @@ Content-Type: application/json
     "email": "sohail@gmail.com",
     "password": "#Sohail404"
 }
+
+### refresh token
+GET {{host}}/refresh-token
+Cookie: refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU5MDA0MDk0NDQ0IiwiaWF0IjoxNjI0NjQ5Njk5fQ.

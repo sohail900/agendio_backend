@@ -26,9 +26,9 @@ model Event{
     location String @db.VarChar(200)
     eventType EventType @default(PUBLIC)
     eventCategory EventCategory @default(MEETING)
-    recurringType RecurringType @default(DAILY)
-    createdById Int @unique
-    createdBy User @relation(fields: [createdById], references: [id])
+    recurringType RecurringType?
+    createdBy Int
+    user User @relation(fields: [createdBy], references: [id])
     startDate DateTime
     endDate DateTime
     createdAt DateTime @default(now())
